@@ -1,0 +1,27 @@
+.MessagesList {
+    position: relative;
+    height:100%;
+    overflow: scroll;
+    padding-bottom:108px;
+    .message {
+        padding:10px;
+        margin:2px 0;
+        background:@control-bg;
+        color:@control-color;
+        border-radius: 10px;
+        max-width:55%;
+        clear:both;
+        &.owner {background:@header-bg;color:@header-color;float:right;}
+    }
+    .clearfix {clear:both;}
+}
+.MessagesReply {
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    width:100%;
+    padding:10px 0;
+    textarea {
+        // ...
+    }
+}
