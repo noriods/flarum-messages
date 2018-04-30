@@ -32,5 +32,11 @@ class AddWebRoutes
             'noriods.messages.user',
             MessagesController::class
         );
+
+        // $routes->get(
+        //     '/api/messages/{username}',
+        //     'noriods.messages.api.user',
+        //     MessagesController::class
+        // );
     }
 }

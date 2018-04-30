@@ -5,7 +5,7 @@ namespace NorioDS\Messages;
 use Flarum\Core\User;
 use Flarum\Database\AbstractModel;
 
-class Answer extends AbstractModel
+class Message extends AbstractModel
 {
     protected $table = 'noriods_messages';
     protected $fillable = ['message'];
@@ -15,7 +15,7 @@ class Answer extends AbstractModel
      */
     public function sender()
     {
-        return $this->belongsTo(User::class);
+        return $this->hasOne(User::class, 'id', 'sender_id');
     }
 
     /**
@@ -23,6 +23,6 @@ class Answer extends AbstractModel
      */
     public function receiver()
     {
-        return $this->belongsTo(User::class);
+        return $this->hasOne(User::class, 'id', 'receiver_id');
     }
 }
