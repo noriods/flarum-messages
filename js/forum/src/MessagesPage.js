@@ -4,7 +4,17 @@ export default class MessagesPage extends Page {
     init() {
         super.init();
         this.loading = true;
-        this.username = m.route.param('username');
+        this.participant = m.route.param('participant');
+        this.user = app.session.user;
+
+        // get chatters for this user
+        app.request({
+            method: 'GET',
+            url: app.forum.attribute('apiUrl') + '/messages/chatters/',
+        }).then(function() {
+            console.log( response );
+        });
+
 
         this.chatters = [
             {

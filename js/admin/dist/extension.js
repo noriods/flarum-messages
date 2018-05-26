@@ -11,7 +11,7 @@ System.register('noriods/flarum-messages/main', ['flarum/app'], function (_expor
         execute: function () {
 
             app.initializers.add('noriods/flarum-messages', function () {
-                alert('Hello, admin!');
+                // alert('Hello, admin!');
             });
         }
     };
